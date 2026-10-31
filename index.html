@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dhriti & Dhaval are getting married. 20 & 21 February 2027, Bhillai. #DDKiShaadi">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Dhriti & Dhaval Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: one phone-sized card; a passport cover opens onto an arched frame that shows one scene at a time */
+:root{
+  color-scheme: light;
+  --ground:#33473a;      /* outside the card on desktop */
+  --paper:#5b7159;       /* sage card stock, like the passport cover */
+  --paper-hi:#657c62;    /* raised petals, inner arch */
+  --ink:#f6f0e1;         /* ivory text */
+  --ink-soft:#d8cfb3;
+  --line:#d4b46a;        /* gold foil hairlines */
+  --gold:#e4c97f;        /* gold display text */
+  --shadow:rgba(18,32,22,.5);
+  --accent:#d4b46a;      /* gold buttons */
+  --deep:#2f4434;        /* dark green ink on gold / ivory */
+  --ivory:#f7f2e5;       /* boarding pass paper */
+  --foil:linear-gradient(115deg,#a9853a 0%,#f4dd98 22%,#c49b45 40%,#fbebb5 55%,#b48c3c 75%,#ecd08a 100%);
+  --f-display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --f-caps:"Cinzel","Trajan Pro",Georgia,serif;
+}
+html,body{height:100%;height:100dvh}
+html{-webkit-text-size-adjust:100%;touch-action:manipulation}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-display);overflow:hidden;-webkit-font-smoothing:antialiased}
+.stage{height:100%;display:grid;place-items:center}
+.phone{position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;
+  background-image:radial-gradient(rgba(255,255,255,.035) .8px,transparent 1.1px);background-size:5px 5px}
+@media (min-width:600px){.phone{width:430px;height:calc(100% - 48px);max-height:920px;border-radius:28px;box-shadow:0 30px 80px -30px rgba(10,20,14,.7)}}
+@media (max-width:599px){body{background:var(--paper)}}
+
+/* ---------- lace ---------- */
+.lace{position:absolute;pointer-events:none;opacity:.9;filter:drop-shadow(1px 1.4px .8px var(--shadow)) drop-shadow(-.6px -.7px .4px rgba(190,210,180,.45))}
+.pt{fill:var(--paper-hi);stroke:rgba(212,180,106,.35);stroke-width:.5}
+.ct{fill:#d4b46a;stroke:none}
+.vn{fill:none;stroke:rgba(212,180,106,.4);stroke-width:.55;stroke-linecap:round}
+.st{stroke-width:1.15}
+.pl{fill:#d4b46a;stroke:none;opacity:.8}
+
+/* ---------- passport (closed booklet on a dark green desk) ---------- */
+.gate{position:absolute;inset:0;z-index:10;display:grid;place-items:center;perspective:1500px;cursor:pointer;
+  background:radial-gradient(ellipse 80% 60% at 50% 42%,#405848,#24352b 75%)}
+.book{position:relative;width:min(78vw,330px,calc(62vh * .7));aspect-ratio:.7;transform-style:preserve-3d;container-type:inline-size;margin-top:-6vh}
+.page{position:absolute;inset:0;border-radius:3px 12px 12px 3px;background-color:var(--paper);
+  background-image:radial-gradient(rgba(255,255,255,.035) .8px,transparent 1.1px);background-size:5px 5px;
+  box-shadow:inset 0 0 0 9px var(--paper),inset 0 0 0 10px rgba(212,180,106,.5),1px 1px 0 #e9e1c9,3px 2px 0 #d6cdb2,4px 3px 0 #c9bfa2,0 26px 44px -16px rgba(0,0,0,.6)}
+.page-shade{position:absolute;inset:0;border-radius:3px 12px 12px 3px;transform-origin:left center;pointer-events:none;opacity:0;
+  background:linear-gradient(90deg,rgba(8,16,10,.75),rgba(8,16,10,.35) 55%,rgba(8,16,10,0))}
+.cover{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d}
+.cover-face,.cover-back{position:absolute;inset:0;border-radius:3px 12px 12px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.cover-face{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3.6cqw;padding:9cqw 6cqw;text-align:center;
+  background-color:#5e745c;
+  background-image:radial-gradient(ellipse 90% 60% at 30% 18%,rgba(255,255,255,.09),transparent 70%),radial-gradient(rgba(0,0,0,.08) .7px,transparent .9px),radial-gradient(rgba(255,255,255,.045) .7px,transparent .9px);
+  background-size:auto,4px 4px,3px 3px;background-position:0 0,0 0,1px 2px;
+  box-shadow:inset 10px 0 14px -10px rgba(0,0,0,.5),0 26px 44px -16px rgba(0,0,0,.6)}
+.cover-back{transform:rotateY(180deg);background:#efe8d4;visibility:hidden;
+  background-image:repeating-linear-gradient(135deg,rgba(91,113,89,.08) 0 1px,transparent 1px 8px),repeating-linear-gradient(45deg,rgba(91,113,89,.08) 0 1px,transparent 1px 8px);
+  box-shadow:inset -10px 0 14px -10px rgba(0,0,0,.35);display:grid;place-items:center}
+.cover-back span{font-family:var(--f-caps);font-size:3.4cqw;letter-spacing:.3em;color:#7f6a36;opacity:.8}
+.shade{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0}
+.cover-face .shade{background:linear-gradient(90deg,rgba(0,0,0,.2),rgba(0,0,0,.6))}
+.cover-back .shade{background:linear-gradient(270deg,rgba(0,0,0,.15),rgba(0,0,0,.55))}
+.foil{background:var(--foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 1px 0 rgba(20,35,25,.45));animation:shine 7s ease-in-out infinite alternate}
+@keyframes shine{from{background-position:0 0}to{background-position:100% 0}}
+.pp-title{margin:0;font-family:var(--f-caps);font-weight:500;font-size:14cqw;letter-spacing:.07em;line-height:1}
+.pp-sub{margin:-1cqw 0 0;font-family:var(--f-caps);font-weight:500;font-size:4.1cqw;letter-spacing:.18em}
+.pp-names{margin:0;font-family:var(--f-caps);font-size:5.6cqw;letter-spacing:.12em}
+.emblem{position:relative;width:66cqw;aspect-ratio:1;max-width:100%}
+.emblem>svg{width:100%;height:100%;display:block;filter:drop-shadow(0 1px 0 rgba(20,35,25,.5))}
+.stringwrap{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none}
+.string{position:absolute;left:-10%;right:-10%;top:50%;height:2px;margin-top:-1px;transform:rotate(-14deg);border-radius:2px;
+  background:repeating-linear-gradient(90deg,#7d6a45 0 3px,#a48d5e 3px 6px);box-shadow:0 1px 1px rgba(0,0,0,.35)}
+.ptag{position:absolute;left:50%;top:50%;z-index:2;width:56%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(-14deg);border:0;padding:0;background:none;cursor:pointer}
+.ptag svg{width:100%;height:100%;display:block;filter:drop-shadow(2px 4px 3px rgba(10,20,12,.45))}
+.ptag:focus-visible{outline:2px solid var(--line);outline-offset:4px;border-radius:12px}
+.pp-hint{position:absolute;left:0;right:0;bottom:calc(7% + env(safe-area-inset-bottom,0px));margin:0;text-align:center;font-family:var(--f-caps);font-size:10.5px;letter-spacing:.3em;
+  color:rgba(246,240,225,.85);animation:pulse 2.4s ease-in-out infinite;transition:opacity .4s}
+@keyframes pulse{50%{opacity:.45}}
+.gate.busy{cursor:default}
+.gate.busy .pp-hint{opacity:0;animation:none}
+
+/* ---------- arched card ---------- */
+.frame{position:absolute;inset:3.5% 5% 3% 5%;width:90%;height:93.5%}
+.frame path{fill:none;stroke:var(--line);vector-effect:non-scaling-stroke}
+.frame .fill{fill:var(--paper-hi);stroke:none;opacity:.55}
+.card .lace.tl{top:-3%;left:-9%;width:74%}
+.card .lace.br{bottom:-4%;right:-10%;width:58%;transform:rotate(180deg)}
+
+.content{position:absolute;left:12%;right:12%;top:19%;bottom:calc(5.5% + 84px)}
+.tag{position:absolute;left:0;right:0;bottom:calc(5.5% + 50px + env(safe-area-inset-bottom,0px));z-index:3;margin:0;text-align:center;font-family:var(--f-caps);font-size:11px;letter-spacing:.16em;color:var(--gold)}
+.pp-tag{margin:-1cqw 0 0;font-family:var(--f-caps);font-size:3.6cqw;letter-spacing:.16em;color:rgba(246,240,225,.8)}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:safe center;text-align:center;gap:clamp(8px,1.8vh,14px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;
+  opacity:0;filter:blur(8px);transform:translateY(14px);pointer-events:none;transition:opacity .7s ease,filter .7s ease,transform .7s ease}
+.scene.on{opacity:1;filter:blur(0);transform:none;pointer-events:auto}
+.scene.off{opacity:0;filter:blur(8px);transform:translateY(-14px)}
+
+.eyebrow{font-family:var(--f-caps);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin:0}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:balance}
+.names-stack{display:flex;flex-direction:column;align-items:center;line-height:.95;font-size:clamp(46px,14vw,60px);letter-spacing:.01em}
+.names-stack span:first-child{align-self:flex-start;margin-left:-4%}
+.names-stack span:last-child{align-self:flex-end;margin-right:-4%}
+.names-stack,.names-line,.medallion .d,.count-big,.route b{color:var(--gold)}
+.pass .route b{color:var(--deep)}
+.amp{font-family:var(--f-script);font-weight:400;color:var(--line);font-size:.62em;line-height:1;margin:.05em 0}
+.names-line{font-size:clamp(30px,9vw,36px)}
+.names-line .amp{font-size:.85em;margin:0 .12em}
+.orn{width:150px;height:14px;color:var(--line)}
+p{margin:0}
+.mem{font-style:normal;font-family:var(--f-caps);font-size:.8em;letter-spacing:.14em;color:var(--gold)}
+.lede{font-size:17px;line-height:1.45;font-style:italic;color:var(--ink);max-width:28ch}
+.families{display:grid;grid-template-columns:1fr 1px 1fr;gap:16px;align-items:center;width:100%;margin-top:4px}
+.families i{height:44px;background:var(--line);opacity:.6}
+.families b{display:block;font-weight:500;font-size:17px}
+.families span{font-family:var(--f-caps);font-size:9.5px;letter-spacing:.24em;color:var(--ink-soft)}
+
+.medallion{position:relative;width:160px;height:206px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.medallion svg{position:absolute;inset:0;width:100%;height:100%;color:var(--line);filter:drop-shadow(.8px 1px .6px var(--shadow)) drop-shadow(-.5px -.5px .3px rgba(190,210,180,.4))}
+.medallion span{position:relative}
+.medallion .d{font-size:64px;line-height:1;font-weight:500;font-variant-numeric:lining-nums}
+.medallion .m{font-family:var(--f-caps);font-size:12px;letter-spacing:.3em;margin-top:6px}
+.medallion .y{font-family:var(--f-caps);font-size:10px;letter-spacing:.3em;color:var(--ink-soft);margin-top:10px}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;align-items:start}
+.day{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+.dates .medallion{width:100%;max-width:132px;height:auto;aspect-ratio:160/206}
+.dates .medallion .d{font-size:clamp(36px,11vw,50px)}
+.dates .medallion .m{font-size:10.5px;letter-spacing:.24em;margin-top:2px}
+.dates .medallion .y{font-size:8.5px;letter-spacing:.2em;margin-top:6px}
+.dates .pill{min-height:30px;padding:0 12px;font-size:9px;letter-spacing:.2em;box-shadow:0 0 0 2px var(--paper-hi),0 0 0 3px rgba(212,180,106,.45)}
+.ev{font-size:17px;line-height:1.3;font-style:italic;color:var(--ink)}
+.ev small{display:block;font-style:normal;font-family:var(--f-caps);font-size:9px;letter-spacing:.18em;color:var(--gold);margin:1px 0 7px}
+.pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-family:var(--f-caps);font-size:10.5px;letter-spacing:.22em;background:var(--paper-hi);
+  box-shadow:0 0 0 3px var(--paper-hi),0 0 0 4px rgba(212,180,106,.45)}
+.pill.big{font-family:var(--f-display);font-size:20px;letter-spacing:.02em;font-weight:500}
+.title-pill{font-size:12.5px;padding:0 22px}
+
+.map{width:min(190px,62%);aspect-ratio:160/200;max-width:100%}
+.map svg{width:100%;height:100%;display:block;filter:drop-shadow(1px 1.5px 1px var(--shadow))}
+.addr{font-size:14.5px;font-style:italic;color:var(--ink-soft);line-height:1.35}
+.btn{appearance:none;border:1px solid var(--line);background:var(--paper-hi);color:var(--ink);font-family:var(--f-caps);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  min-height:42px;padding:0 22px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s}
+.btn:hover{background:#718a6e}
+.btn:active{transform:scale(.97)}
+.btn.solid{background:var(--foil);border-color:#c9a552;color:var(--deep);font-weight:500}
+.btn.solid:hover{filter:brightness(1.06)}
+.btn:focus-visible,.field:focus-visible,.opt input:focus-visible+span,.step button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.count-big{font-size:86px;line-height:.9;font-weight:500;font-variant-numeric:tabular-nums lining-nums;display:flex;align-items:center;gap:14px}
+.count-big::before,.count-big::after{content:"";width:22px;height:1px;background:var(--line)}
+.count-row{display:flex;gap:26px;justify-content:center}
+.count-row div{display:flex;flex-direction:column;align-items:center;gap:2px}
+.count-row b{font-size:28px;font-weight:500;font-variant-numeric:tabular-nums lining-nums}
+.count-row span,.unit{font-family:var(--f-caps);font-size:9.5px;letter-spacing:.26em;color:var(--ink-soft)}
+
+.timeline{display:flex;flex-direction:column;align-items:center;gap:10px}
+.timeline li{list-style:none;display:flex;flex-direction:column;align-items:center;gap:2px}
+.timeline ol{padding:0;margin:0;display:contents}
+.timeline li .n+.n{margin-top:-2px}
+.timeline .n em{font-style:normal;font-family:var(--f-caps);font-size:10px;letter-spacing:.16em;color:var(--gold);margin-left:6px;vertical-align:2px}
+.timeline .t{font-family:var(--f-caps);font-size:9.5px;letter-spacing:.26em;color:var(--ink-soft)}
+.timeline .n{font-size:22px;font-weight:500}
+.timeline .s{font-size:14px;font-style:italic;color:var(--ink-soft)}
+.timeline .sep{width:14px;height:14px;transform:rotate(90deg);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d4b46a' d='M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* flight path + plane */
+.flight{position:absolute;inset:3.5% 5% 3% 5%;pointer-events:none;z-index:2}
+.flight svg{position:absolute;inset:0;width:100%;height:100%}
+.flight #fpath{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:2 5;vector-effect:non-scaling-stroke;opacity:.75}
+.plane{position:absolute;left:0;top:0;width:26px;height:26px;color:var(--accent);transition:transform 1.2s cubic-bezier(.5,0,.3,1);filter:drop-shadow(1px 1.5px 1px rgba(15,28,18,.5))}
+.plane svg{fill:currentColor}
+
+/* boarding pass */
+.pass{width:100%;max-width:290px;background:var(--ivory);color:var(--deep);border:1px solid var(--line);border-radius:14px;text-align:left;box-shadow:0 10px 24px -14px rgba(10,20,12,.6)}
+.pass .route span,.pass .pfields dt,.pass .stub span{color:#8c7743}
+.pass-top{display:flex;justify-content:space-between;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(180,140,60,.4);font-family:var(--f-caps);font-size:8.5px;letter-spacing:.2em;color:#8c7743}
+.route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:12px 14px 4px}
+.route b{display:block;font-size:30px;font-weight:500;line-height:1;letter-spacing:.04em}
+.route span{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+.route .to{text-align:right}
+.route .mid{display:flex;align-items:center;gap:4px;color:var(--line);min-width:0}
+.route .mid i{flex:1;border-top:1px dashed var(--line)}
+.route .mid svg{width:18px;height:18px;fill:#b8913f;flex:none}
+.pfields{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin:0;padding:8px 14px 12px}
+.pfields div{min-width:0}
+.pfields dt{font-family:var(--f-caps);font-size:8px;letter-spacing:.2em;color:var(--ink-soft)}
+.pfields dd{margin:0;font-size:15px;font-weight:500;line-height:1.2;overflow-wrap:anywhere}
+.perf{position:relative;border-top:1px dashed var(--line);margin:0 12px}
+.perf::before,.perf::after{content:"";position:absolute;top:-9px;width:16px;height:16px;border-radius:50%;background:#617860;border:1px solid var(--line)}
+.perf::before{left:-21px;clip-path:inset(0 0 0 50%)}
+.perf::after{right:-21px;clip-path:inset(0 50% 0 0)}
+.stub{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px 12px}
+.barcode{height:30px;flex:1;max-width:150px;opacity:.8;background:repeating-linear-gradient(90deg,var(--deep) 0 1px,transparent 1px 3px,var(--deep) 3px 5px,transparent 5px 6px,var(--deep) 6px 7px,transparent 7px 10px,var(--deep) 10px 12px,transparent 12px 13px)}
+.stub span{font-family:var(--f-caps);font-size:8.5px;letter-spacing:.18em;color:var(--ink-soft);text-align:right;line-height:1.5}
+
+.field{width:100%;max-width:240px;min-height:42px;border:1px solid rgba(212,180,106,.65);background:rgba(36,56,42,.28);border-radius:10px;padding:0 14px;font:inherit;font-size:16px;color:var(--ink);text-align:center}
+.field::placeholder{color:#b9c2a6;font-style:italic}
+
+/* ---------- controls ---------- */
+.nav{position:absolute;left:0;right:0;bottom:calc(5.5% + env(safe-area-inset-bottom,0px));z-index:3;display:flex;justify-content:center;align-items:center;gap:12px;padding-inline:12%}
+.count{font-family:var(--f-caps);font-size:9.5px;letter-spacing:.2em;color:var(--ink-soft);font-variant-numeric:tabular-nums;min-width:3.2em;text-align:center}
+.navbtn{appearance:none;border:1px solid rgba(212,180,106,.6);background:rgba(66,88,66,.94);color:var(--ink);border-radius:999px;min-height:36px;padding:0 18px;
+  font-family:var(--f-display);font-style:italic;font-size:14.5px;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 4px 14px -8px rgba(10,20,12,.6)}
+.navbtn svg{width:12px;height:12px;flex:none}
+.next svg{animation:nudge 1.8s ease-in-out infinite}
+.prev{background:transparent!important;box-shadow:none!important}
+.scene::-webkit-scrollbar{display:none}
+/* shorter phones (iPhone SE, small Androids) */
+@media (max-height:720px){
+  .content{top:17%;bottom:calc(5.5% + 76px);left:10%;right:10%}
+  .tag{bottom:calc(5.5% + 44px + env(safe-area-inset-bottom,0px));font-size:10px}
+  .names-stack{font-size:clamp(40px,12vw,52px)}
+  .medallion{width:124px;height:160px}
+  .medallion .d{font-size:50px}
+  .medallion .m{font-size:10px;letter-spacing:.2em}
+  .map{width:min(150px,50%)}
+  .count-big{font-size:66px}
+  .count-row b{font-size:24px}
+  .route b{font-size:24px}
+  .pfields{gap:5px 10px;padding-bottom:8px}
+  .pfields dd{font-size:13.5px}
+  .barcode{height:24px}
+  .lede{font-size:15.5px}
+  .timeline .n{font-size:19px}
+  .pill{min-height:36px}
+  .btn,.field{min-height:38px}
+}
+@media (max-height:600px){
+  .medallion{width:104px;height:134px}
+  .medallion .d{font-size:42px}
+  .map{width:min(120px,42%)}
+  .count-big{font-size:54px}
+}
+/* narrow phones */
+@media (max-width:360px){
+  .content{left:9%;right:9%}
+  .families b{font-size:15px}
+  .count-row{gap:18px}
+  .pills{gap:8px}
+  .pill{padding:0 14px}
+}
+.navbtn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@keyframes nudge{50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){
+  .scene{transition-duration:.01s!important}
+  .foil,.pp-hint{animation:none}
+  .next svg{animation:none}
+}
+</style>
+</head>
+<body>
+
+<main class="stage">
+  <div class="phone" id="phone">
+
+    <!-- the invitation card -->
+    <div class="card" id="card" aria-live="polite">
+      <svg class="frame" viewBox="0 0 100 160" preserveAspectRatio="none" aria-hidden="true">
+        <path class="fill" d="M3 158V40Q3 33 10 31.5Q19 29.5 24 20Q34 2 50 1.5Q66 2 76 20Q81 29.5 90 31.5Q97 33 97 40V158Z"/>
+        <path stroke-width="1" d="M3 158V40Q3 33 10 31.5Q19 29.5 24 20Q34 2 50 1.5Q66 2 76 20Q81 29.5 90 31.5Q97 33 97 40V158Z"/>
+        <path stroke-width=".6" opacity=".7" d="M6 155.5V41.5Q6 36 12 34.5Q21.5 32 26.5 22.5Q36 5.5 50 5Q64 5.5 73.5 22.5Q78.5 32 88 34.5Q94 36 94 41.5V155.5Z"/>
+      </svg>
+      <svg class="lace tl" viewBox="0 0 200 200" aria-hidden="true" data-seed="7"></svg>
+      <svg class="lace br" viewBox="0 0 200 200" aria-hidden="true" data-seed="21"></svg>
+      <div class="flight" id="flight" aria-hidden="true">
+        <svg viewBox="0 0 100 160" preserveAspectRatio="none"><path id="fpath" d="M10 40Q18 35 26 26Q37 11.5 50 11Q63 11.5 74 26Q82 35 90 40"/></svg>
+        <span class="plane" id="plane"><svg viewBox="0 0 24 24"><path d="M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z"/></svg></span>
+      </div>
+
+      <div class="content" id="scenes">
+
+        <section class="scene" aria-label="The couple">
+          <svg class="orn" viewBox="0 0 150 14"><path d="M0 7H62M88 7H150" stroke="currentColor" stroke-width=".8"/><path d="M75 1.5L80.5 7 75 12.5 69.5 7Z" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="64" cy="7" r="1.2" fill="currentColor"/><circle cx="86" cy="7" r="1.2" fill="currentColor"/></svg>
+          <h1 class="names-stack"><span>Dhriti</span><span class="amp">&amp;</span><span>Dhaval</span></h1>
+          <svg class="orn" viewBox="0 0 150 14"><path d="M0 7H62M88 7H150" stroke="currentColor" stroke-width=".8"/><path d="M75 1.5L80.5 7 75 12.5 69.5 7Z" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="64" cy="7" r="1.2" fill="currentColor"/><circle cx="86" cy="7" r="1.2" fill="currentColor"/></svg>
+        </section>
+
+        <section class="scene" aria-label="Invitation">
+          <h2 class="names-line">Dhriti <span class="amp">&amp;</span> Dhaval</h2>
+          <svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7H62M88 7H150" stroke="currentColor" stroke-width=".8"/><path d="M75 1.5L80.5 7 75 12.5 69.5 7Z" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="64" cy="7" r="1.2" fill="currentColor"/><circle cx="86" cy="7" r="1.2" fill="currentColor"/></svg>
+          <p class="lede">With the grace of God and the blessings of my late mother, <span class="mem">Chaaya</span>, we request the joy of your company as we take our seven vows and begin a life together.</p>
+          <p class="eyebrow" style="margin-top:6px">With love from</p>
+          <div class="families">
+            <div><b>Chhaya</b></div>
+            <i></i>
+            <div><b>Uma &amp; Govind</b><span>THE NANDANWARS</span></div>
+          </div>
+        </section>
+
+        <section class="scene" aria-label="Dates">
+          <p class="eyebrow">Save the dates</p>
+          <div class="dates">
+            <div class="day">
+              <div class="medallion">
+                <svg viewBox="0 0 160 206" aria-hidden="true">
+              <path d="M80 6C112 6 138 46 138 103S112 200 80 200 22 160 22 103 48 6 80 6Z" fill="var(--paper-hi)" stroke="currentColor" stroke-width="1"/>
+              <path d="M80 14C107 14 130 50 130 103S107 192 80 192 30 156 30 103 53 14 80 14Z" fill="none" stroke="currentColor" stroke-width=".6" opacity=".7"/>
+              <path d="M80 0L85 6 80 12 75 6Z M80 194L85 200 80 206 75 200Z M16 103L22 98 28 103 22 108Z M132 103L138 98 144 103 138 108Z" fill="var(--paper-hi)" stroke="currentColor" stroke-width=".8"/>
+            </svg>
+                <span class="d">20</span><span class="m">FEB</span><span class="y">◆ 2027 ◆</span>
+              </div>
+              <span class="pill">SATURDAY</span>
+              <p class="ev">Engagement <small>5:00 PM</small>Sangeet <small>8:00 PM</small>Haldi <small>12:00 AM</small></p>
+            </div>
+            <div class="day">
+              <div class="medallion">
+                <svg viewBox="0 0 160 206" aria-hidden="true">
+              <path d="M80 6C112 6 138 46 138 103S112 200 80 200 22 160 22 103 48 6 80 6Z" fill="var(--paper-hi)" stroke="currentColor" stroke-width="1"/>
+              <path d="M80 14C107 14 130 50 130 103S107 192 80 192 30 156 30 103 53 14 80 14Z" fill="none" stroke="currentColor" stroke-width=".6" opacity=".7"/>
+              <path d="M80 0L85 6 80 12 75 6Z M80 194L85 200 80 206 75 200Z M16 103L22 98 28 103 22 108Z M132 103L138 98 144 103 138 108Z" fill="var(--paper-hi)" stroke="currentColor" stroke-width=".8"/>
+            </svg>
+                <span class="d">21</span><span class="m">FEB</span><span class="y">◆ 2027 ◆</span>
+              </div>
+              <span class="pill">SUNDAY</span>
+              <p class="ev">Wedding <small>12:15 PM</small></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene" aria-label="Boarding pass">
+          <p class="eyebrow">Your boarding pass</p>
+          <div class="pass">
+            <div class="pass-top"><span>FLIGHT DD 2102</span><span>CLASS · FAMILY</span></div>
+            <div class="route">
+              <div><b>SGL</b><span>Single life</span></div>
+              <span class="mid" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z"/></svg><i></i></span>
+              <div class="to"><b>FVR</b><span>Forever</span></div>
+            </div>
+            <dl class="pfields">
+              <div><dt>PASSENGER</dt><dd id="pax">Our dearest guest</dd></div>
+              <div><dt>DATES</dt><dd>20 &amp; 21 Feb 2027</dd></div>
+              <div><dt>DESTINATION</dt><dd>Our wedding</dd></div>
+              <div><dt>GATE</dt><dd>Bhillai</dd></div>
+              <div><dt>SEAT</dt><dd>Right beside us</dd></div>
+              <div><dt>DRESS CODE</dt><dd>Festive Indian</dd></div>
+            </dl>
+            <div class="perf"></div>
+            <div class="stub"><i class="barcode" aria-hidden="true"></i><span>DHRITI &amp;<br>DHAVAL</span></div>
+          </div>
+        </section>
+
+        <section class="scene" aria-label="Venue">
+          <h3 style="font-size:26px">The Venue</h3>
+          <div class="map">
+            <svg viewBox="0 0 160 200" aria-hidden="true">
+              <defs><clipPath id="arch"><path d="M8 196V58Q8 48 18 46Q30 43 38 30Q55 6 80 6Q105 6 122 30Q130 43 142 46Q152 48 152 58V196Z"/></clipPath></defs>
+              <g clip-path="url(#arch)">
+                <rect width="160" height="200" fill="#efe9d8"/>
+                <path d="M10 122Q22 104 42 112Q56 124 46 142Q32 154 16 146Q4 136 10 122Z" fill="#a9bfb2"/>
+                <path d="M0 40Q30 46 44 34" fill="none" stroke="#a9bfb2" stroke-width="3"/>
+                <path d="M110 20Q124 26 132 40L148 60 140 70 120 56Z" fill="#cbd8bb"/>
+                <path d="M96 150Q110 140 128 152L124 172 100 170Z" fill="#cbd8bb"/>
+                <g fill="none" stroke="#fffaf6" stroke-linecap="round">
+                  <path d="M60 0Q66 60 70 100T80 200" stroke-width="5"/>
+                  <path d="M50 120Q100 110 160 130" stroke-width="4"/>
+                  <path d="M66 60Q110 70 160 50" stroke-width="3"/>
+                  <path d="M100 0Q104 80 120 200" stroke-width="3"/>
+                  <path d="M70 170L160 180" stroke-width="2.5"/>
+                </g>
+                <text x="104" y="104" font-family="Cinzel,Georgia,serif" font-size="8" letter-spacing="1.5" fill="#5b7159">BHILLAI</text>
+                
+                <g transform="translate(64 96)"><path d="M0 0C-7-9-10-13-10-18A10 10 0 0 1 10-18C10-13 7-9 0 0Z" fill="#b0573f"/><circle cy="-18" r="3.6" fill="#f7f2e5"/></g>
+              </g>
+              <path d="M8 196V58Q8 48 18 46Q30 43 38 30Q55 6 80 6Q105 6 122 30Q130 43 142 46Q152 48 152 58V196Z" fill="none" stroke="#d4b46a" stroke-width="1.2"/>
+              <path d="M3 199V57Q3 44 16 41Q27 38.5 34 27Q52 1 80 1Q108 1 126 27Q133 38.5 144 41Q157 44 157 57V199" fill="none" stroke="#d4b46a" stroke-width=".6"/>
+            </svg>
+          </div>
+          <span class="pill title-pill">BHILLAI</span>
+          <p class="addr">Chhattisgarh</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bhillai+Chhattisgarh" target="_blank" rel="noopener">
+            <svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 13.5C2.5 9.5 1 7.3 1 5.2a5 5 0 0 1 10 0c0 2.1-1.5 4.3-5 8.3Z" fill="none" stroke="currentColor"/><circle cx="6" cy="5.2" r="1.6" fill="currentColor"/></svg>
+            Get directions</a>
+        </section>
+
+        <section class="scene" aria-label="Countdown">
+          <p class="eyebrow">Until take-off</p>
+          <div class="count-big" id="cd-d">00</div>
+          <span class="unit">DAYS</span>
+          <div class="count-row">
+            <div><b id="cd-h">00</b><span>HOURS</span></div>
+            <div><b id="cd-m">00</b><span>MINUTES</span></div>
+            <div><b id="cd-s">00</b><span>SECONDS</span></div>
+          </div>
+          <p class="lede" style="margin-top:10px">Fasten your seatbelts. Our best journey is about to begin.</p>
+        </section>
+
+        <section class="scene" aria-label="Order of the evening">
+          <span class="pill title-pill" style="margin-bottom:6px">FLIGHT ITINERARY</span>
+          <div class="timeline"><ol>
+            <li><span class="t">LEG 1 · SATURDAY, 20 FEBRUARY</span><span class="n">Engagement <em>5:00 PM</em></span><span class="n">Sangeet <em>8:00 PM</em></span><span class="n">Haldi <em>12:00 AM</em></span></li>
+            <li class="sep" aria-hidden="true"></li>
+            <li><span class="t">LEG 2 · SUNDAY, 21 FEBRUARY</span><span class="n">Wedding <em>12:15 PM</em></span></li>
+          </ol></div>
+        </section>
+
+        <section class="scene" aria-label="See you there">
+          <p class="eyebrow">See you on board</p>
+          <h2 class="names-line">Dhriti <span class="amp">&amp;</span> Dhaval</h2>
+          <svg class="orn" viewBox="0 0 150 14"><path d="M0 7H62M88 7H150" stroke="currentColor" stroke-width=".8"/><path d="M75 1.5L80.5 7 75 12.5 69.5 7Z" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="64" cy="7" r="1.2" fill="currentColor"/><circle cx="86" cy="7" r="1.2" fill="currentColor"/></svg>
+          <p class="eyebrow" style="color:var(--ink);font-size:12px">20 &amp; 21 · 02 · 2027 &nbsp;·&nbsp; Bhillai</p>
+        </section>
+      </div>
+
+      <p class="tag">#DDKiShaadi</p>
+      <nav class="nav" aria-label="Invitation pages">
+        <button class="navbtn prev" id="prev" type="button"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 8l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span>Back</span></button>
+        <span class="count" id="count" aria-live="polite">1 / 8</span>
+        <button class="navbtn next" id="next" type="button"><span id="next-label">Next</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+      </nav>
+    </div>
+
+    <!-- the passport -->
+    <div class="gate" id="gate" role="button" aria-label="Open the invitation" tabindex="-1">
+      <div class="book" id="book">
+        <div class="page" aria-hidden="true"></div>
+        <div class="page-shade" id="pshade"></div>
+        <div class="cover" id="cover">
+          <div class="cover-face" id="cface">
+            <h2 class="pp-title foil">PASSPORT</h2>
+            <p class="pp-sub foil">WEDDING INVITATION</p>
+            <div class="emblem" id="emblem">
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs><linearGradient id="foilg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b38d3e"/><stop offset=".3" stop-color="#f4dd98"/><stop offset=".5" stop-color="#c49b45"/><stop offset=".7" stop-color="#f8e6ab"/><stop offset="1" stop-color="#b08a3c"/></linearGradient></defs>
+              <g fill="none" stroke="url(#foilg)">
+                <circle cx="100" cy="100" r="58" stroke-width="1"/><circle cx="100" cy="100" r="53" stroke-width=".6"/><circle cx="100" cy="100" r="30" stroke-width=".6" stroke-dasharray="1.5 2.5"/>
+                <g stroke-width=".6"><path d="M100 40V47" transform="rotate(0 100 100)"/><path d="M100 44V47" transform="rotate(5 100 100)"/><path d="M100 44V47" transform="rotate(10 100 100)"/><path d="M100 44V47" transform="rotate(15 100 100)"/><path d="M100 44V47" transform="rotate(20 100 100)"/><path d="M100 44V47" transform="rotate(25 100 100)"/><path d="M100 40V47" transform="rotate(30 100 100)"/><path d="M100 44V47" transform="rotate(35 100 100)"/><path d="M100 44V47" transform="rotate(40 100 100)"/><path d="M100 44V47" transform="rotate(45 100 100)"/><path d="M100 44V47" transform="rotate(50 100 100)"/><path d="M100 44V47" transform="rotate(55 100 100)"/><path d="M100 40V47" transform="rotate(60 100 100)"/><path d="M100 44V47" transform="rotate(65 100 100)"/><path d="M100 44V47" transform="rotate(70 100 100)"/><path d="M100 44V47" transform="rotate(75 100 100)"/><path d="M100 44V47" transform="rotate(80 100 100)"/><path d="M100 44V47" transform="rotate(85 100 100)"/><path d="M100 40V47" transform="rotate(90 100 100)"/><path d="M100 44V47" transform="rotate(95 100 100)"/><path d="M100 44V47" transform="rotate(100 100 100)"/><path d="M100 44V47" transform="rotate(105 100 100)"/><path d="M100 44V47" transform="rotate(110 100 100)"/><path d="M100 44V47" transform="rotate(115 100 100)"/><path d="M100 40V47" transform="rotate(120 100 100)"/><path d="M100 44V47" transform="rotate(125 100 100)"/><path d="M100 44V47" transform="rotate(130 100 100)"/><path d="M100 44V47" transform="rotate(135 100 100)"/><path d="M100 44V47" transform="rotate(140 100 100)"/><path d="M100 44V47" transform="rotate(145 100 100)"/><path d="M100 40V47" transform="rotate(150 100 100)"/><path d="M100 44V47" transform="rotate(155 100 100)"/><path d="M100 44V47" transform="rotate(160 100 100)"/><path d="M100 44V47" transform="rotate(165 100 100)"/><path d="M100 44V47" transform="rotate(170 100 100)"/><path d="M100 44V47" transform="rotate(175 100 100)"/><path d="M100 40V47" transform="rotate(180 100 100)"/><path d="M100 44V47" transform="rotate(185 100 100)"/><path d="M100 44V47" transform="rotate(190 100 100)"/><path d="M100 44V47" transform="rotate(195 100 100)"/><path d="M100 44V47" transform="rotate(200 100 100)"/><path d="M100 44V47" transform="rotate(205 100 100)"/><path d="M100 40V47" transform="rotate(210 100 100)"/><path d="M100 44V47" transform="rotate(215 100 100)"/><path d="M100 44V47" transform="rotate(220 100 100)"/><path d="M100 44V47" transform="rotate(225 100 100)"/><path d="M100 44V47" transform="rotate(230 100 100)"/><path d="M100 44V47" transform="rotate(235 100 100)"/><path d="M100 40V47" transform="rotate(240 100 100)"/><path d="M100 44V47" transform="rotate(245 100 100)"/><path d="M100 44V47" transform="rotate(250 100 100)"/><path d="M100 44V47" transform="rotate(255 100 100)"/><path d="M100 44V47" transform="rotate(260 100 100)"/><path d="M100 44V47" transform="rotate(265 100 100)"/><path d="M100 40V47" transform="rotate(270 100 100)"/><path d="M100 44V47" transform="rotate(275 100 100)"/><path d="M100 44V47" transform="rotate(280 100 100)"/><path d="M100 44V47" transform="rotate(285 100 100)"/><path d="M100 44V47" transform="rotate(290 100 100)"/><path d="M100 44V47" transform="rotate(295 100 100)"/><path d="M100 40V47" transform="rotate(300 100 100)"/><path d="M100 44V47" transform="rotate(305 100 100)"/><path d="M100 44V47" transform="rotate(310 100 100)"/><path d="M100 44V47" transform="rotate(315 100 100)"/><path d="M100 44V47" transform="rotate(320 100 100)"/><path d="M100 44V47" transform="rotate(325 100 100)"/><path d="M100 40V47" transform="rotate(330 100 100)"/><path d="M100 44V47" transform="rotate(335 100 100)"/><path d="M100 44V47" transform="rotate(340 100 100)"/><path d="M100 44V47" transform="rotate(345 100 100)"/><path d="M100 44V47" transform="rotate(350 100 100)"/><path d="M100 44V47" transform="rotate(355 100 100)"/></g>
+              </g>
+              <g transform="rotate(0 100 100)"><path d="M100 100L100 38L107 90.2Z" fill="url(#foilg)"/><path d="M100 100L100 38L93 90.2Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(90 100 100)"><path d="M100 100L100 38L107 90.2Z" fill="url(#foilg)"/><path d="M100 100L100 38L93 90.2Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(180 100 100)"><path d="M100 100L100 38L107 90.2Z" fill="url(#foilg)"/><path d="M100 100L100 38L93 90.2Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(270 100 100)"><path d="M100 100L100 38L107 90.2Z" fill="url(#foilg)"/><path d="M100 100L100 38L93 90.2Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(45 100 100)"><path d="M100 100L100 60L105 93.0Z" fill="url(#foilg)"/><path d="M100 100L100 60L95 93.0Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(135 100 100)"><path d="M100 100L100 60L105 93.0Z" fill="url(#foilg)"/><path d="M100 100L100 60L95 93.0Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(225 100 100)"><path d="M100 100L100 60L105 93.0Z" fill="url(#foilg)"/><path d="M100 100L100 60L95 93.0Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g><g transform="rotate(315 100 100)"><path d="M100 100L100 60L105 93.0Z" fill="url(#foilg)"/><path d="M100 100L100 60L95 93.0Z" fill="none" stroke="url(#foilg)" stroke-width=".9"/></g>
+              <circle cx="100" cy="100" r="3" fill="url(#foilg)"/>
+              <g fill="url(#foilg)">
+                <path d="M0 3C-1.5 0-6-.5-6 3.2-6 6 0 10 0 10S6 6 6 3.2C6-.5 1.5 0 0 3Z" transform="translate(100 18) scale(1.3)"/>
+                <path d="M0 3C-1.5 0-6-.5-6 3.2-6 6 0 10 0 10S6 6 6 3.2C6-.5 1.5 0 0 3Z" transform="translate(148 42) scale(.8)"/>
+                <path d="M0 3C-1.5 0-6-.5-6 3.2-6 6 0 10 0 10S6 6 6 3.2C6-.5 1.5 0 0 3Z" transform="translate(52 158) scale(.7)"/>
+                <text x="30" y="108" font-family="Cinzel,Georgia,serif" font-size="17" text-anchor="middle">D</text>
+                <text x="170" y="108" font-family="Cinzel,Georgia,serif" font-size="17" text-anchor="middle">D</text>
+                <path d="M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z" transform="translate(88 168) rotate(-90 12 12) scale(1)"/>
+                <path d="M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z" transform="translate(150 140) rotate(-35 12 12) scale(.6)"/>
+                <path d="M21 12.6c.6 0 1-.3 1-.6s-.4-.6-1-.6h-5.3L11.4 4H9.6l2.2 7.4H6.5L4.7 9H3.3l1.1 3-1.1 3h1.4l1.8-2.4h5.3L9.6 20h1.8l4.3-7.4H21z" transform="translate(40 50) rotate(-35 12 12) scale(.6)"/>
+              </g>
+            </svg>
+              <button class="ptag" id="seal" type="button" aria-label="Untie the plane to open">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <defs><linearGradient id="mirror" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6622"/><stop offset=".28" stop-color="#f7e7ae"/><stop offset=".45" stop-color="#b8903a"/><stop offset=".58" stop-color="#3e2e0f"/><stop offset=".72" stop-color="#d9b866"/><stop offset="1" stop-color="#fff1c2"/></linearGradient></defs>
+                <path d="M118 60C118 57 113 55.5 106 55.5L74 55.5 50 22 41 22 56 55.5 24 55.5 14 42 8 42 13 58 13 62 8 78 14 78 24 64.5 56 64.5 41 98 50 98 74 64.5 106 64.5C113 64.5 118 63 118 60Z" fill="url(#mirror)" stroke="#6b4f18" stroke-width=".6"/>
+                <circle cx="13" cy="60" r="2" fill="#5b4413"/><circle cx="114" cy="60" r="1.6" fill="#5b4413"/>
+              </svg>
+            </button>
+            </div>
+            <p class="pp-names foil">DHRITI &amp; DHAVAL</p>
+            <p class="pp-tag">#DDKiShaadi</p>
+            <div class="stringwrap" aria-hidden="true"><span class="string" id="string"></span></div>
+            <div class="shade" id="shf"></div>
+          </div>
+          <div class="cover-back" id="cback" aria-hidden="true"><span>BON VOYAGE</span><div class="shade" id="shb"></div></div>
+        </div>
+      </div>
+      <p class="pp-hint">TAP TO OPEN YOUR PASSPORT</p>
+    </div>
+
+  </div>
+</main>
+
+<script>
+/* ---------- embossed lace, drawn procedurally ---------- */
+function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const f=n=>+n.toFixed(2);
+function leaf(x,y,l,deg){return `<g transform="translate(${f(x)} ${f(y)}) rotate(${f(deg)})"><path class="pt" d="M0 0Q${f(l*.45)} ${f(-l*.32)} ${f(l)} 0Q${f(l*.45)} ${f(l*.32)} 0 0Z"/><path class="vn" d="M${f(l*.08)} 0L${f(l*.82)} 0"/></g>`}
+function blossom(x,y,r,rot){let s=`<g transform="translate(${f(x)} ${f(y)}) rotate(${f(rot)})">`;for(let i=0;i<5;i++)s+=`<ellipse class="pt" cx="${f(r*.58)}" cy="0" rx="${f(r*.52)}" ry="${f(r*.34)}" transform="rotate(${i*72})"/>`;return s+`<circle class="ct" r="${f(r*.22)}"/></g>`}
+function rose(x,y,r,rot){let s=`<g transform="translate(${f(x)} ${f(y)}) rotate(${f(rot)})">`;
+  [[1,8],[.8,7],[.6,6],[.42,5],[.26,4]].forEach(([k,n],j)=>{for(let i=0;i<n;i++){s+=`<ellipse class="pt" cx="${f(r*k*.44)}" cy="0" rx="${f(r*k*.5)}" ry="${f(r*k*.38)}" transform="rotate(${f(i*360/n+j*21)})"/>`}});
+  return s+`<path class="vn" d="M${f(-r*.1)} 0A${f(r*.1)} ${f(r*.1)} 0 1 1 ${f(r*.08)} ${f(r*.06)}A${f(r*.05)} ${f(r*.05)} 0 1 1 0 ${f(-r*.03)}"/></g>`}
+function vine(x0,y0,ang,len,R){
+  const a=ang*Math.PI/180,x1=x0+Math.cos(a)*len,y1=y0+Math.sin(a)*len,b=(R()-.5)*len*.55;
+  const cx=(x0+x1)/2-Math.sin(a)*b,cy=(y0+y1)/2+Math.cos(a)*b;
+  let s=`<path class="vn st" d="M${f(x0)} ${f(y0)}Q${f(cx)} ${f(cy)} ${f(x1)} ${f(y1)}"/>`;
+  const n=Math.floor(len/15);
+  for(let i=1;i<=n;i++){const t=i/(n+1),u=1-t;
+    const px=u*u*x0+2*u*t*cx+t*t*x1,py=u*u*y0+2*u*t*cy+t*t*y1;
+    const dx=2*u*(cx-x0)+2*t*(x1-cx),dy=2*u*(cy-y0)+2*t*(y1-cy);
+    const d=Math.atan2(dy,dx)*180/Math.PI;
+    s+=leaf(px,py,(6+R()*6)*(1-t*.45),d+(i%2?1:-1)*(38+R()*18));}
+  return s+(R()>.4?blossom(x1,y1,4+R()*3,R()*72):`<circle class="pl" cx="${f(x1)}" cy="${f(y1)}" r="1.8"/>`)}
+function cluster(seed){const R=rng(seed);let s='';
+  for(let i=0;i<8;i++)s+=vine(20,20,(i/7)*90+(R()-.5)*12,85+R()*95,R);
+  for(let i=0;i<9;i++){const a=R()*100-5;s+=leaf(22,22,32+R()*22,a)}
+  for(let i=0;i<13;i++){const a=(R()*90)*Math.PI/180,d=50+R()*90;s+=blossom(20+Math.cos(a)*d,20+Math.sin(a)*d,5+R()*5,R()*72)}
+  for(let i=0;i<18;i++){const a=(R()*90)*Math.PI/180,d=45+R()*120;s+=`<circle class="pl" cx="${f(20+Math.cos(a)*d)}" cy="${f(20+Math.sin(a)*d)}" r="${f(.8+R()*1.1)}"/>`}
+  s+=rose(118,34,12,R()*60)+rose(36,118,12,R()*60)+rose(88,84,10,R()*60)+rose(74,26,17,R()*60)+rose(26,76,18,R()*60)+rose(58,62,12,R()*60)+rose(28,28,30,R()*60);
+  return s}
+document.querySelectorAll('svg.lace').forEach(el=>{el.innerHTML=cluster(+el.dataset.seed)});
+
+/* ---------- scenes ---------- */
+const scenes=[...document.querySelectorAll('.scene')];
+let cur=-1,busy=false,opened=false;
+function show(i){
+  if(busy||i===cur||i<0||i>=scenes.length)return;
+  busy=true;const first=cur<0;
+  if(cur>=0){const o=scenes[cur];o.classList.remove('on');o.classList.add('off');setTimeout(()=>o.classList.remove('off'),720)}
+  cur=i;
+  setTimeout(()=>{scenes[i].classList.add('on');busy=false},first?0:260);
+  document.getElementById('next-label').textContent=i===scenes.length-1?'Start again':'Next';
+  document.getElementById('prev').querySelector('span').textContent=i===0?'Cover':'Back';
+  document.getElementById('count').textContent=`${i+1} / ${scenes.length}`;
+  placePlane();
+}
+const advance=dir=>{if(animating)return;if(!opened){if(dir>0)openGate();return}const n=cur+dir;if(n>=scenes.length)show(0);else if(n<0)closeGate();else show(n)};
+document.getElementById('next').addEventListener('click',()=>advance(1));
+document.getElementById('prev').addEventListener('click',()=>advance(-1));
+let wheelLock=0;
+document.getElementById('phone').addEventListener('wheel',e=>{const now=Date.now();if(now-wheelLock<900||Math.abs(e.deltaY)<18)return;wheelLock=now;advance(e.deltaY>0?1:-1)},{passive:true});
+let ty=null;
+let tx=null;
+document.getElementById('phone').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.target.closest('input,button,a,label')?null:e.touches[0].clientY},{passive:true});
+document.getElementById('phone').addEventListener('touchend',e=>{if(!opened){if(tx!=null&&e.changedTouches[0].clientX-tx<-40)openGate();ty=null;return}if(ty==null)return;const sc=scenes[cur];const d=ty-e.changedTouches[0].clientY;ty=null;
+  if(sc&&sc.scrollHeight>sc.clientHeight+2){if(d>0&&sc.scrollTop+sc.clientHeight<sc.scrollHeight-2)return;if(d<0&&sc.scrollTop>2)return}
+  if(Math.abs(d)>50)advance(d>0?1:-1)});
+document.addEventListener('keydown',e=>{if(e.target.matches('input'))return;if(['ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();advance(1)}if(['ArrowUp','PageUp'].includes(e.key)){e.preventDefault();advance(-1)}});
+
+/* ---------- plane flies along the arch as scenes advance ---------- */
+const fpath=document.getElementById('fpath'),plane=document.getElementById('plane'),flight=document.getElementById('flight');
+function placePlane(){
+  const L=fpath.getTotalLength(),t=Math.max(cur,0)/(scenes.length-1),p=L*t;
+  const box=flight.getBoundingClientRect(),sx=box.width/100,sy=box.height/160;
+  const pt=fpath.getPointAtLength(p),a=fpath.getPointAtLength(Math.max(0,p-.6)),b=fpath.getPointAtLength(Math.min(L,p+.6));
+  const deg=Math.atan2((b.y-a.y)*sy,(b.x-a.x)*sx)*180/Math.PI;
+  plane.style.transform=`translate(${pt.x*sx}px,${pt.y*sy}px) translate(-50%,-50%) rotate(${deg}deg)`;
+}
+placePlane();addEventListener('resize',placePlane);
+
+/* ---------- personal links: add #Guest-Name to the link ---------- */
+try{const g=decodeURIComponent(location.hash.slice(1)).replace(/[-_]+/g,' ').trim();
+  if(g&&/^[A-Za-z0-9 ]{1,40}$/.test(g)){document.getElementById('pax').textContent=g}}catch(e){}
+
+/* ---------- passport: plane takes off, cover turns, zoom into the page ---------- */
+const gate=document.getElementById('gate'),book=document.getElementById('book'),cover=document.getElementById('cover');
+const cface=document.getElementById('cface'),cback=document.getElementById('cback'),shf=document.getElementById('shf'),shb=document.getElementById('shb');
+const pshade=document.getElementById('pshade'),ptag=document.getElementById('seal'),stringEl=document.getElementById('string'),emblem=document.getElementById('emblem');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches?0.05:1;
+const wait=ms=>new Promise(r=>setTimeout(r,ms*RM));
+let animating=false;
+function placeString(){stringEl.style.top=(emblem.offsetTop+emblem.offsetHeight/2)+'px'}
+placeString();addEventListener('resize',placeString);document.fonts&&document.fonts.ready.then(placeString);
+
+/* one frame of the cover at angle th (0 closed, 180 fully open), with matching light and shadow */
+function setCover(th){
+  const r=th*Math.PI/180;
+  cover.style.transform=`rotateY(${-th}deg)`;
+  const front=th<90;
+  cface.style.visibility=front?'visible':'hidden';
+  cback.style.visibility=front?'hidden':'visible';
+  shf.style.opacity=front?(th/90)*.55:0;                    /* front darkens as it turns away from the light */
+  shb.style.opacity=front?.5:((180-th)/90)*.5;              /* inside brightens as it settles open */
+  const lift=Math.min(1,th/12);
+  pshade.style.opacity=(1-th/180)*.85*lift;                 /* shadow the lifting cover throws on the page */
+  pshade.style.transform=`scaleX(${front?Math.max(.08,Math.cos(r)):.08})`;
+}
+const easeIO=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const easeZoom=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function tween(dur,ease,fn){return new Promise(res=>{const t0=performance.now();dur*=RM;
+  (function f(now){const t=dur?Math.min(1,(now-t0)/dur):1;fn(ease(t));t<1?requestAnimationFrame(f):res()})(t0)})}
+const lerp=(a,b,t)=>a+(b-a)*t;
+/* open spread: book slides right and shrinks so the inside of the cover and the page sit side by side */
+const spreadK=()=>Math.min(1,gate.clientWidth*.9/(2*book.offsetWidth));
+const fillScale=()=>Math.max(gate.clientWidth/book.offsetWidth,gate.clientHeight/book.offsetHeight)*1.04;
+const setBook=(tx,sc)=>{book.style.transform=`translateX(${tx}%) scale(${sc})`};
+function turn(from,to,dur){const k=spreadK();
+  return tween(dur,easeIO,e=>{const th=lerp(from,to,e),f=th/180;setCover(th);setBook(f*k*50,lerp(1,k,f))})}
+
+function planeFrames(){
+  const dx=gate.clientWidth*.9,dy=-gate.clientHeight*.26,b='translate(-50%,-50%)';
+  return [
+    {transform:`${b} rotate(-14deg) scale(1)`,opacity:1,offset:0},
+    {transform:`${b} translate(4px,-14px) rotate(-17deg) scale(1.12)`,opacity:1,offset:.18},
+    {transform:`${b} translate(${dx*.4}px,${dy*.36}px) rotate(-22deg) scale(.48)`,opacity:1,offset:.55},
+    {transform:`${b} translate(${dx*.78}px,${dy*.78}px) rotate(-25deg) scale(.18)`,opacity:.85,offset:.82},
+    {transform:`${b} translate(${dx}px,${dy}px) rotate(-26deg) scale(.05)`,opacity:0,offset:1}];
+}
+const stringFrames=[{transform:'rotate(-14deg) translateX(0)',opacity:1},{transform:'rotate(-14deg) translateX(65%)',opacity:0}];
+let anims=[];
+const run=(el,frames,opt)=>{const a=el.animate(frames,{fill:'forwards',...opt,duration:opt.duration*RM,delay:(opt.delay||0)*RM});anims.push(a);return a};
+
+async function openGate(){
+  if(opened||animating)return;animating=true;gate.classList.add('busy');
+  anims.forEach(a=>a.cancel());anims=[];
+  run(ptag,planeFrames(),{duration:1350,easing:'cubic-bezier(.35,0,.6,.45)'});
+  run(stringEl,stringFrames,{duration:500,delay:160,easing:'ease-in'});
+  await wait(1250);                                   /* plane is a speck in the distance */
+  await turn(0,180,1500);
+  await wait(250);                                    /* a beat to see the open passport */
+  const k=spreadK(),s=fillScale();
+  const z=tween(950,easeZoom,e=>setBook(lerp(k*50,0,e),lerp(k,s,e)));
+  await wait(650);
+  opened=true;show(0);
+  run(gate,[{opacity:1},{opacity:0}],{duration:380,easing:'ease-out'});
+  await z;await wait(80);
+  gate.hidden=true;animating=false;
+}
+async function closeGate(){
+  if(!opened||animating)return;animating=true;
+  anims.forEach(a=>a.cancel());anims=[];
+  const k=spreadK(),s=fillScale();
+  setCover(180);setBook(0,s);ptag.style.opacity=0;stringEl.style.opacity=0;
+  gate.hidden=false;gate.classList.add('busy');
+  run(gate,[{opacity:0},{opacity:1}],{duration:380,easing:'ease-in'});
+  await wait(380);
+  if(cur>=0){scenes[cur].classList.remove('on');cur=-1;placePlane()}
+  await tween(950,easeZoom,e=>setBook(lerp(0,k*50,e),lerp(s,k,e)));
+  await wait(200);
+  await turn(180,0,1400);
+  book.style.transform='';ptag.style.opacity='';stringEl.style.opacity='';
+  run(ptag,planeFrames(),{duration:1350,direction:'reverse',easing:'cubic-bezier(.35,0,.6,.45)'});
+  run(stringEl,stringFrames,{duration:450,delay:900,direction:'reverse',easing:'ease-out'});
+  await wait(1400);
+  anims.forEach(a=>a.cancel());anims=[];
+  opened=false;animating=false;gate.classList.remove('busy');
+}
+setCover(0);
+gate.addEventListener('click',()=>{if(!opened)openGate()});
+
+/* ---------- countdown to the wedding, 21 Feb 2027, 12:15 PM IST ---------- */
+const target=new Date('2027-02-21T12:15:00+05:30').getTime();
+const pad=n=>String(n).padStart(2,'0');
+function tick(){let s=Math.max(0,Math.floor((target-Date.now())/1000));
+  const d=Math.floor(s/86400);s%=86400;const h=Math.floor(s/3600);s%=3600;const m=Math.floor(s/60);s%=60;
+  document.getElementById('cd-d').textContent=pad(d);document.getElementById('cd-h').textContent=pad(h);
+  document.getElementById('cd-m').textContent=pad(m);document.getElementById('cd-s').textContent=pad(s)}
+tick();setInterval(tick,1000);
+
+
+</script>
+
+</body>
+</html>
